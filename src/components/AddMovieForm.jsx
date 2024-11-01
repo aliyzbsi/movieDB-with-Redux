@@ -34,23 +34,25 @@ const AddMovieForm = (props) => {
 
   const { title, director, genre, metascore, description } = movie;
   return (
-    <div className="bg-white rounded-md shadow flex-1">
+    <div className="bg-white rounded-md shadow flex-1 dark:bg-slate-800 dark:text-white">
       <form onSubmit={handleSubmit}>
         <div className="p-5 pb-3 border-b border-zinc-200">
-          <h4 className="text-xl font-bold">Add Movie</h4>
+          <h4 className="text-xl font-bold">
+            Yeni Film Ekle <strong>{title}</strong>
+          </h4>
         </div>
-
         <div className="px-5 py-3">
           <div className="py-2">
             <label htmlFor="title" className="block pb-1 text-lg">
               Title
             </label>
             <input
+              className="dark:bg-slate-800 dark:text-white"
               value={title}
               onChange={handleChange}
               name="title"
-              type="text"
               id="title"
+              type="text"
             />
           </div>
           <div className="py-2">
@@ -58,11 +60,12 @@ const AddMovieForm = (props) => {
               Director
             </label>
             <input
+              className="dark:bg-slate-800 dark:text-white"
               value={director}
               onChange={handleChange}
               name="director"
-              type="text"
               id="director"
+              type="text"
             />
           </div>
           <div className="py-2">
@@ -70,11 +73,12 @@ const AddMovieForm = (props) => {
               Genre
             </label>
             <input
+              className="dark:bg-slate-800 dark:text-white"
               value={genre}
               onChange={handleChange}
               name="genre"
-              type="text"
               id="genre"
+              type="text"
             />
           </div>
           <div className="py-2">
@@ -82,34 +86,36 @@ const AddMovieForm = (props) => {
               Metascore
             </label>
             <input
+              className="dark:bg-slate-800 dark:text-white"
               value={metascore}
               onChange={handleChange}
               name="metascore"
-              type="number"
               id="metascore"
+              type="number"
             />
           </div>
           <div className="py-2">
-            <label htmlFor="Description" className="block pb-1 text-lg">
+            <label htmlFor="description" className="block pb-1 text-lg ">
               Description
             </label>
             <textarea
+              className="dark:bg-slate-800 dark:text-white"
               value={description}
               onChange={handleChange}
               name="description"
-              id="Description"
+              id="description"
             ></textarea>
           </div>
         </div>
         <div className="px-5 py-4 border-t border-zinc-200 flex justify-end gap-2">
-          <Link to={`/movies`} className="myButton bg-zinc-500">
+          <Link to={`/movies/`} className="myButton bg-zinc-500">
             Vazgeç
           </Link>
           <button
             type="submit"
             className="myButton bg-green-700 hover:bg-green-600"
           >
-            Ekle
+            Yeni Filmi Kaydet
           </button>
         </div>
       </form>
