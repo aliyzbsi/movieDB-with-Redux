@@ -26,7 +26,7 @@ const MovieList = (props) => {
             </tr>
           </thead>
 
-          <tbody className="text-sm">
+          <tbody className="text-xs md:text-sm">
             {movies.map((movie, index) => (
               <MovieListItem key={index} movie={movie} />
             ))}

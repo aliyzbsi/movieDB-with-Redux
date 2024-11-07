@@ -22,9 +22,9 @@ const MovieHeader = (props) => {
   };
 
   return (
-    <div className="flex justify-between items-center shadow rounded-md bg-white p-2 pl-3 my-2 dark:bg-zinc-800 ">
+    <div className="flex flex-col justify-between items-center shadow rounded-md bg-white p-2 pl-3 my-2 dark:bg-zinc-800 ">
       <h2 className="text-zinc-600 dark:text-gray-200">{appTitle}</h2>
-      <div className="flex items-center gap-2">
+      <div className="flex flex-col md:flex-row  gap-2">
         {location.pathname === "/movies" ? (
           <input
             type="text"
